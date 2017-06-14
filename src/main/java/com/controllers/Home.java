@@ -19,11 +19,10 @@ public class Home {
     }
 
     @RequestMapping("/offers")
-    @ResponseBody
     public String offers() {
         Example quote = restTemplate.getForObject("https://offersvc.expedia.com/offers/v2/getOffers" +
                 "?scenario=deal-finder&page=foo&uid=foo&productType=Hotel", Example.class);
-        return quote.getOffers().getHotel().get(0).getDestination().getCity();
+        return "offers";
     }
 
 }
