@@ -35,6 +35,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>tomcat</groupId>
+			<artifactId>jasper-compiler</artifactId>
+			<version>5.5.23</version>
+		</dependency>
+		<dependency>
+			<groupId>tomcat</groupId>
+			<artifactId>jasper-runtime</artifactId>
+			<version>5.5.23</version>
+		</dependency>
+		<dependency>
+			<groupId>tomcat</groupId>
+			<artifactId>jasper-compiler-jdt</artifactId>
+			<version>5.5.23</version>
+		</dependency>
 	</dependencies>
 
 	<build>

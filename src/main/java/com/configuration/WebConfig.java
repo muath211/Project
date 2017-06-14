@@ -28,8 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public ServletRegistrationBean dispatcherServletRegistration() {
-        ServletRegistrationBean registration = new ServletRegistrationBean(
-                dispatcherServlet());
+        ServletRegistrationBean registration = new ServletRegistrationBean(dispatcherServlet());
         registration.addUrlMappings("/");
         return registration;
     }

@@ -4,16 +4,8 @@
 <body>
 
 <div class="container">
-    <div class="header clearfix">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">About</a></li>
-                <li role="presentation"><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-    </div>
+
+<jsp:include page="header.jsp"/>
 
     <div class="jumbotron">
         <h1>Jumbotron heading</h1>
@@ -45,9 +37,7 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
+    <jsp:include page="footer.jsp"/>
 
 </div> <!-- /container -->
 
