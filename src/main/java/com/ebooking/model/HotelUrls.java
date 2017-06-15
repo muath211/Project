@@ -1,6 +1,9 @@
 
-package com.model;
+package com.ebooking.model;
 
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 public class HotelUrls {
 
@@ -9,6 +12,15 @@ public class HotelUrls {
 
     public String getHotelInfositeUrl() {
         return hotelInfositeUrl;
+    }
+
+    public String getDecodedHotelInfositeUrl() {
+        try {
+            return URLDecoder.decode(hotelInfositeUrl, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            // should be logged
+        }
+        return null;
     }
 
     public void setHotelInfositeUrl(String hotelInfositeUrl) {

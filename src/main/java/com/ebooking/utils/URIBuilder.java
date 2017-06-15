@@ -1,4 +1,4 @@
-package com.utils;
+package com.ebooking.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,8 +18,6 @@ public class URIBuilder extends org.apache.http.client.utils.URIBuilder {
     public <T> URIBuilder addParam(String param, T value) {
 
         if (value == null)
-            return this;
-        if(value instanceof Number && ((Number) value).longValue() == 0)
             return this;
         if (value instanceof LocalDate)
             super.addParameter(param, dateFormat.format(value));

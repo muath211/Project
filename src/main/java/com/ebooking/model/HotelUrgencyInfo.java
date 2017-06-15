@@ -1,5 +1,5 @@
 
-package com.model;
+package com.ebooking.model;
 
 import java.util.ArrayList;
 import java.util.List;

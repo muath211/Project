@@ -1,4 +1,4 @@
-package com.configuration;
+package com.ebooking.configuration;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;

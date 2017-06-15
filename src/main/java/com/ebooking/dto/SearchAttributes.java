@@ -1,4 +1,4 @@
-package com.dto;
+package com.ebooking.dto;
 
 
 import java.time.LocalDate;
@@ -7,9 +7,9 @@ public class SearchAttributes {
     private String destinationCity;
     private LocalDate minTripStartDate;
     private LocalDate maxTripStartDate;
-    private long lengthOfStay;
-    private short minStarRating;
-    private short maxStarRating;
+    private Long lengthOfStay;
+    private Short minStarRating;
+    private Short maxStarRating;
 
     public String getDestinationCity() {
         return destinationCity;
@@ -35,27 +35,27 @@ public class SearchAttributes {
         this.maxTripStartDate = maxTripStartDate;
     }
 
-    public long getLengthOfStay() {
+    public Long getLengthOfStay() {
         return lengthOfStay;
     }
 
-    public void setLengthOfStay(long lengthOfStay) {
+    public void setLengthOfStay(Long lengthOfStay) {
         this.lengthOfStay = lengthOfStay;
     }
 
-    public short getMinStarRating() {
+    public Short getMinStarRating() {
         return minStarRating;
     }
 
-    public void setMinStarRating(short minStarRating) {
+    public void setMinStarRating(Short minStarRating) {
         this.minStarRating = minStarRating;
     }
 
-    public short getMaxStarRating() {
+    public Short getMaxStarRating() {
         return maxStarRating;
     }
 
-    public void setMaxStarRating(short maxStarRating) {
+    public void setMaxStarRating(Short maxStarRating) {
         this.maxStarRating = maxStarRating;
     }
 }

@@ -1,5 +1,5 @@
 
-package com.model;
+package com.ebooking.model;
 
 
 public class HotelScores {

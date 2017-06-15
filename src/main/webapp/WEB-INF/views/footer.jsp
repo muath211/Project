@@ -1,3 +1,3 @@
 <footer class="footer">
-    <p>&copy; 2016 Company, Inc.</p>
+    <p>&copy; 2016 e-booking, Inc.</p>
 </footer>

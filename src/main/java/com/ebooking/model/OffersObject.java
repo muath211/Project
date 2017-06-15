@@ -1,8 +1,8 @@
 
-package com.model;
+package com.ebooking.model;
 
 
-public class Example {
+public class OffersObject {
 
     private OfferInfo offerInfo;
     private UserInfo userInfo;
