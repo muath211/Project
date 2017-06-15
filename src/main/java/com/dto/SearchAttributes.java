@@ -4,19 +4,19 @@ package com.dto;
 import java.time.LocalDate;
 
 public class SearchAttributes {
-    private String city;
+    private String destinationCity;
     private LocalDate minTripStartDate;
     private LocalDate maxTripStartDate;
     private long lengthOfStay;
     private short minStarRating;
     private short maxStarRating;
 
-    public String getCity() {
-        return city;
+    public String getDestinationCity() {
+        return destinationCity;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setDestinationCity(String destinationCity) {
+        this.destinationCity = destinationCity;
     }
 
     public LocalDate getMinTripStartDate() {

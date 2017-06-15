@@ -19,6 +19,8 @@ public class URIBuilder extends org.apache.http.client.utils.URIBuilder {
 
         if (value == null)
             return this;
+        if(value instanceof Number && ((Number) value).longValue() == 0)
+            return this;
         if (value instanceof LocalDate)
             super.addParameter(param, dateFormat.format(value));
         else

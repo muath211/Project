@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 
 @Controller
 public class Home {
@@ -41,24 +40,31 @@ public class Home {
     }
 
     @RequestMapping("/offers")
-    @ResponseBody
-    public String offersFilterd(@Valid @ModelAttribute("searchAttributes")SearchAttributes search,
+    public ModelAndView offersFiltered(@Valid @ModelAttribute("searchAttributes")SearchAttributes search,
                                       BindingResult result) {
         try {
-            URIBuilder uri = new URIBuilder("https://offersvc.expedia.com")
+            URIBuilder uri = new URIBuilder("https://offersvc.expedia.com/offers/v2/getOffers")
              .addParam("minTripStartDate",  search.getMinTripStartDate() )
              .addParam("maxTripStartDate",  search.getMaxTripStartDate())
              .addParam("lengthOfStay", search.getLengthOfStay())
              .addParam("minStarRating", search.getMinStarRating())
              .addParam("maxStarRating", search.getMaxStarRating())
-             .addParam("destinationCity", search.getCity());
+             .addParam("destinationCity", search.getDestinationCity())
+             .addParam("scenario", "deal-finder")
+             .addParam("page", "foo")
+             .addParam("uid", "foo")
+             .addParam("productType", "Hotel");
 
-        return uri.build().toString();
+            Example deals = restTemplate.getForObject(uri.build().toString(), Example.class);
+
+            ModelAndView modelAndView = new ModelAndView("offers");
+            modelAndView.addObject("deals", deals);
+            return modelAndView;
 
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        return "problem!!!!!!";
+        return null;
     }
 
     @RequestMapping("/test")
