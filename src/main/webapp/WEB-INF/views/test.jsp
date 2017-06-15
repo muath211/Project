@@ -6,12 +6,17 @@
 <div class="container">
 
     <jsp:include page="header.jsp"/>
-    <div class="jumbotron">
-        <h1>Find Best Offers</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+  <div class="card">
+    <div class="card-block">
+      <h3 class="card-title">Card title</h3>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-    <jsp:include page="search.jsp"/>
+  </div>
+
     <jsp:include page="footer.jsp"/>
+
 </div> <!-- /container -->
 
 
