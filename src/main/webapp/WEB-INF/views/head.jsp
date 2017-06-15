@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../styles/bootstrap/favicon.ico">
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <title>e-booking</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../styles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
