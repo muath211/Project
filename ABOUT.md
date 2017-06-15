@@ -1,7 +1,7 @@
 This is a very simple Spring boot application mainly consumes a REST-ful Service and displays the results in a simple pages. also
 there are a very simple search page that could help in filtering the results.
 
-The app consists of two layers, the UI layer which is built with spring-mvc with jsp as templating engine, and the services
+The app consists of two layers, the UI layer which is built with spring-mvc with jsp as templating enginea also bootstrap for styling, and the services
 layer that acts as provider uses spring rest templates to consume REST-ful services.
 
 Most of things are close to generic so that any time it can be modified or customized.
