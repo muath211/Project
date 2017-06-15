@@ -7,10 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 @EnableAutoConfiguration
-public class ProjectApplication {
+public class EBookingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProjectApplication.class, args);
+        SpringApplication.run(EBookingApplication.class, args);
     }
 
 }

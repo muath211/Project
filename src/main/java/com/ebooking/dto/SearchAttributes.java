@@ -58,4 +58,6 @@ public class SearchAttributes {
     public void setMaxStarRating(Short maxStarRating) {
         this.maxStarRating = maxStarRating;
     }
+
+
 }

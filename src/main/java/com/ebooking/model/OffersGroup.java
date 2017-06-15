@@ -2,7 +2,7 @@
 package com.ebooking.model;
 
 
-public class OffersObject {
+public class OffersGroup {
 
     private OfferInfo offerInfo;
     private UserInfo userInfo;
