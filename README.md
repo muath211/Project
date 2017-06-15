@@ -1,6 +1,6 @@
 Running The App Locally
 
--prerequisite
+-prerequisite : 
 	maven should be installed on your environment maven home should be addd to env varialbes.
 
 The following command should be executed and it will quickly compile and run the application.
