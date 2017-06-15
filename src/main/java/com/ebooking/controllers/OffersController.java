@@ -20,7 +20,7 @@ public class OffersController {
     @Autowired
     RestTemplate restTemplate;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String home(Model model) {
         model.addAttribute("searchAttributes", new SearchAttributes());
         return "index";
