@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 
 public class OffersServiceImpl implements OffersService {
 
-    private static final String URL = "https://offersvc.expedia.com/offers/v2/getOffers";
+    private static final String URL = "https://url.com";
 
     @Autowired
     private RestTemplate restTemplate;
