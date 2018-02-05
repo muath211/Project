@@ -39,6 +39,8 @@ public class OffersController {
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
     public @ResponseBody RootObject event(@RequestBody RootObject rootObject) {
+        System.out.println(rootObject.getMessage());
+        System.out.println(rootObject);
         return rootObject;
     }
 
