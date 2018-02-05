@@ -37,7 +37,7 @@ public class OffersController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "/event", method = RequestMethod.POST)
+    @RequestMapping(value = "/show/event", method = RequestMethod.POST)
     public @ResponseBody RootObject event(@RequestBody RootObject rootObject) {
         return rootObject;
     }
