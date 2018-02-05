@@ -42,7 +42,7 @@ public class OffersController {
         return rootObject;
     }
 
-    @RequestMapping(value = "/show", method = RequestMethod.GET)
+    @RequestMapping(value = "/show/", method = RequestMethod.GET)
     public @ResponseBody String show() {
         return "google-site-verification: googleaaf6a1bff784af77.html";
     }
