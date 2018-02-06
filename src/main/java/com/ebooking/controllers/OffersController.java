@@ -47,7 +47,7 @@ public class OffersController {
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
     public @ResponseBody
-    RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest) throws IOException {
+    RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest, @RequestParam  String token) throws IOException {
         System.out.println("request>>>>>>>" + httpRequest.toString());
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
