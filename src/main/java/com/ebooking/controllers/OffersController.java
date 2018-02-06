@@ -45,14 +45,16 @@ public class OffersController {
     }
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
-    public @ResponseBody RootObject event(@RequestBody RootObject rootObject, HttpServletRequest httpRequest) throws IOException {
+    public @ResponseBody RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest) throws IOException {
         System.out.println("request>>>>>>>"+httpRequest.toString());
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         String body = getBody(httpRequest);
-        System.out.println(body);
-        System.out.println(rootObject.getMessage().getData());
-        System.out.println(rootObject);
-        return rootObject;
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+//        System.out.println(body);
+//        System.out.println(rootObject.getMessage().getData());
+//        System.out.println(rootObject);
+        return new RootObject();
     }
 
     @RequestMapping(value = "/show/googleaaf6a1bff784af77.html", method = RequestMethod.GET)
