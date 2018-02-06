@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Enumeration;
 
 @Controller
 public class OffersController {
@@ -45,20 +46,35 @@ public class OffersController {
     }
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
-    public @ResponseBody RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest) throws IOException {
-        System.out.println("request>>>>>>>"+httpRequest.toString());
+    public @ResponseBody
+    RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest) throws IOException {
+        System.out.println("request>>>>>>>" + httpRequest.toString());
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         String body = getBody(httpRequest);
         System.out.println(body);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        System.out.println("============================================================================");
+        Enumeration<String> headerNames = httpRequest.getHeaderNames();
+
+        if (headerNames != null) {
+            while (headerNames.hasMoreElements()) {
+                String s = headerNames.nextElement();
+                System.out.println("Header: " + s + " >> " + httpRequest.getHeader(s));
+            }
+        }
+
+        System.out.println("============================================================================");
+
 //        System.out.println(rootObject.getMessage().getData());
 //        System.out.println(rootObject);
         return new RootObject();
     }
 
     @RequestMapping(value = "/show/googleaaf6a1bff784af77.html", method = RequestMethod.GET)
-    public @ResponseBody String show() {
+    public @ResponseBody
+    String show() {
         return "google-site-verification: googleaaf6a1bff784af77.html";
     }
 
@@ -95,10 +111,6 @@ public class OffersController {
         body = stringBuilder.toString();
         return body;
     }
-
-
-
-
 
 
 }
