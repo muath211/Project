@@ -5,10 +5,14 @@ import com.ebooking.model.OffersGroup;
 import com.ebooking.model.RootObject;
 import com.ebooking.services.OffersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 @Controller
 public class OffersController {
@@ -38,7 +42,10 @@ public class OffersController {
     }
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
-    public @ResponseBody RootObject event(@RequestBody RootObject rootObject) {
+    public @ResponseBody RootObject event(@RequestBody RootObject rootObject, HttpServletRequest httpRequest) throws IOException {
+        System.out.println("request>>>>>>>"+httpRequest.toString());
+
+        httpRequest.getReader().lines().forEach(System.out::println);
         System.out.println(rootObject.getMessage().getData());
         System.out.println(rootObject);
         return rootObject;
