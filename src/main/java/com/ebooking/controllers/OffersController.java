@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
+import java.util.Map;
 
 @Controller
 public class OffersController {
@@ -47,7 +48,7 @@ public class OffersController {
 
     @RequestMapping(value = "/show/event", method = RequestMethod.POST)
     public @ResponseBody
-    RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest, @RequestParam  String token) throws IOException {
+    RootObject event(/*@RequestBody RootObject rootObject, */HttpServletRequest httpRequest, @RequestParam String token) throws IOException {
         System.out.println("request>>>>>>>" + httpRequest.toString());
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -66,6 +67,12 @@ public class OffersController {
         }
 
         System.out.println("============================================================================");
+
+        Map<String, String[]> parameterMap = httpRequest.getParameterMap();
+        parameterMap.forEach((x, y) -> System.out.println(x + "_" + y));
+
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>token>>>>>>>>>>>>>"+token);
+
 
 //        System.out.println(rootObject.getMessage().getData());
 //        System.out.println(rootObject);
