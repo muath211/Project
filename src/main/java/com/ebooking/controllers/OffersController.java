@@ -4,6 +4,7 @@ import com.ebooking.dto.SearchAttributes;
 import com.ebooking.model.OffersGroup;
 import com.ebooking.model.RootObject;
 import com.ebooking.services.OffersService;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -71,7 +72,16 @@ public class OffersController {
         Map<String, String[]> parameterMap = httpRequest.getParameterMap();
         parameterMap.forEach((x, y) -> System.out.println(x + "_" + y));
 
+
+        String hex = DigestUtils.sha256Hex("Shahid+pubsub+secret");
+
+
+
+
         System.out.println(">>>>>>>>>>>>>>>>>>>>>token>>>>>>>>>>>>>"+token);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>hex>>>>>>>>>>>>>"+hex);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>tokenvalidation>>>>>>>>>>>>>"+hex.equals(token));
+
 
 
 //        System.out.println(rootObject.getMessage().getData());
