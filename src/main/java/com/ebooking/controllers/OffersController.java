@@ -50,8 +50,8 @@ public class OffersController {
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         String body = getBody(httpRequest);
+        System.out.println(body);
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//        System.out.println(body);
 //        System.out.println(rootObject.getMessage().getData());
 //        System.out.println(rootObject);
         return new RootObject();
